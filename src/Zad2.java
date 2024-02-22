@@ -8,16 +8,17 @@ public class Zad2 {
         int[][] random_array = new int[size][size];
         int largestA = random_array[0][0];
         int largestB = random_array[0][0];
-        int n = size;
-        for (int i = 0; i < n; i++) {
-            random_array[i] = new int[n];
-            for (int j = 0; j < n; j++) {
+        int sum1=0;
+        int sum2=0;
+        for (int i = 0; i < size; i++) {
+            random_array[i] = new int[size];
+            for (int j = 0; j < size; j++) {
                 if (i == j) {
                     int temp = rand.nextInt(1, 3);
                     if (temp == 1)
-                        random_array[i][j] = random_array[i][n - i - 1] = 1;
+                        random_array[i][j] = random_array[i][size - i - 1] = 1;
                     else {
-                        random_array[i][j] = random_array[i][n - i - 1] = -1;
+                        random_array[i][j] = random_array[i][size - i - 1] = -1;
                     }
                 } else {
                     random_array[i][j] = rand.nextInt(-100, 101);
@@ -42,9 +43,26 @@ public class Zad2 {
 
             for(int i=0;i<random_array.length;i++){
                 for (int j=0;j<random_array.length;j++){
-                    
+                    if(j%2==0){
+                        sum1=sum1+random_array[i][j];
+                    }
+                    else {
+                        sum2=sum2+random_array[i][j];
+                    }
+                }
+            }
+        System.out.println("Zad2 suma parzystych: "+sum1);
+        System.out.println("Zad2 suma nieparzystych: "+sum2);
+            int count=0;
+        for(int i=0;i<random_array.length;i++){
+            for (int j=0;j<random_array.length;j++){
+                if(random_array[i][j]<i*j){
+                    count++;
+                }
                 }
             }
         }
     }
+
+
 
