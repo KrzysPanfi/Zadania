@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Set;
 
 public class Zad1 {
-    public static double Srednia_elementow(int[][] arr, int p ){
+    public static double Average_of_elements(int[][] arr, int p ){
         String p1 =String.valueOf(p);
         char[]p1_cyfry=p1.toCharArray();
         Integer[]p1_cyfry_int=new Integer[p1_cyfry.length];
