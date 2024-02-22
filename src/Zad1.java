@@ -9,7 +9,7 @@ public class Zad1 {
         int counter=0;
         for (int i=0;i<arr.length;i++){
             for(int j=0;j<arr[i].length;j++){
-                if(j%2==0 && cyfry(p).contains(i) ){
+                if(i%2==0 && cyfry(p).contains(j) ){
                     sum=sum+arr[i][j];
                     counter++;
                 }
