@@ -61,6 +61,7 @@ public class Zad2 {
                 }
                 }
             }
+        System.out.println("");
         }
     }
 
