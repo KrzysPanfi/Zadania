@@ -61,7 +61,7 @@ public class Zad2 {
                 }
                 }
             }
-        System.out.println("");
+        System.out.println("Liczba komórek o wartościach mniejszych niż iloczyn indeksów: "+count);
         }
     }
 
