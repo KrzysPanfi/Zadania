@@ -10,9 +10,9 @@ public class Zad2 {
         int largestB = random_array[0][0];
         int sum1 = 0;
         int sum2 = 0;
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; i < random_array.length; i++) {
             random_array[i] = new int[size];
-            for (int j = 0; j < size; j++) {
+            for (int j = 0; j < random_array[i].length; j++) {
                 if (i == j) {
                     int temp = rand.nextInt(1, 3);
                     if (temp == 1) {
@@ -42,10 +42,11 @@ public class Zad2 {
         System.out.println("Zad2 druga najwieksza wartosc: " + largestB);
 
         for (int i = 0; i < random_array.length; i++) {
-            for (int j = 0; j < random_array.length; j++) {
+            for (int j = 0; j < random_array[i].length; j++) {
                 if (i % 2 == 0) {
                     sum1 = sum1 + random_array[i][j];
-                } else if (j % 2 != 0) {
+                }
+                if (j % 2 != 0) {
                     sum2 = sum2 + random_array[i][j];
                 }
             }
@@ -54,7 +55,7 @@ public class Zad2 {
         System.out.println("Zad2 stosunek: " + divison);
         int count = 0;
         for (int i = 0; i < random_array.length; i++) {
-            for (int j = 0; j < random_array.length; j++) {
+            for (int j = 0; j < random_array[i].length; j++) {
                 if (random_array[i][j] < i * j) {
                     count++;
                 }
