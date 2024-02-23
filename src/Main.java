@@ -1,5 +1,4 @@
 import java.util.*;
-
 public class Main {
     public static void main(String[] args) {
         Random rand = new Random();
@@ -10,12 +9,9 @@ public class Main {
                 arr1[i][j] = rand.nextInt(10, 20);
             }
         }
-        
         System.out.println("Zad1: " + Zad1.Average_of_elements(arr1, 2020));
         //zad2
         Zad2.Random_array();
 
     }
-
-
 }
